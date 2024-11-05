@@ -8,6 +8,28 @@ Exemples
 `milieu("ABC") renvoie "B"; milieu("ABCD") renvoie "BC"`
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
 <summary>Solution</summary>
 

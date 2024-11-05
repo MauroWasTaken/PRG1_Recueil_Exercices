@@ -4,5 +4,12 @@
 
 #ifndef PERSONNE_H
 #define PERSONNE_H
-struct personne;
+#include "date.h"
+
+struct Personne{
+    const char* nom;
+    const char* addresse;
+    Date anniversaire ;
+};
+void afficher_personne(Personne personne);
 #endif //PERSONNE_H

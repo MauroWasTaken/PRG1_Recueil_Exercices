@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "07___Structure_Enum",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "07___Structure_Enum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-07___Structure_Enum-Debug-19112ae7fe550f87eca8.json",
+					"name" : "07___Structure_Enum",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/HEIG/PRG1/PRG1_Recueil_Exercices/07 - Structure_Enum/01-04 - Date_personne/cmake-build-debug",
+		"source" : "C:/HEIG/PRG1/PRG1_Recueil_Exercices/07 - Structure_Enum/01-04 - Date_personne"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

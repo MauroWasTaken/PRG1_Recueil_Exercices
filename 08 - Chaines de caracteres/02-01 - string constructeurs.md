@@ -13,6 +13,7 @@ string s1 = "ABC";
 string s2(s1, 1);
 cout << '|' << s2 << '|' << endl;
 ~~~
+BC
 
 2.
 ~~~cpp
@@ -20,6 +21,7 @@ string s1 = "ABC";
 string s2(s1, 2, 3);
 cout << '|' << s2 << '|' << endl;
 ~~~
+C
 
 3.	
 ~~~cpp
@@ -27,6 +29,7 @@ string s1 = "ABC";
 string s2(s1, 3, 2);
 cout << '|' << s2 << '|' << endl;
 ~~~
+||
 
 4.	
 ~~~cpp
@@ -34,30 +37,36 @@ string s1 = "ABC";
 string s2(s1, 4, 1);
 cout << '|' << s2 << '|' << endl;
 ~~~
+erreur à l'execution
 
 5.	
 ~~~cpp
 string s("ABC", 3);
 cout << '|' << s << '|' << endl;
 ~~~
+ABC
+
 
 6.	
 ~~~cpp
 string s("ABC", 4);
 cout << '|' << s << '|' << endl;
 ~~~
+ABC/0
 
 7.	
 ~~~cpp
 string s("ABC", 5);
 cout << '|' << s << '|' << endl;
 ~~~
+comportement indefinit
 
 8.	
 ~~~cpp
 string s(3, 'A');
 cout << '|' << s << '|' << endl;
 ~~~
+AAA
 
 
 <details>

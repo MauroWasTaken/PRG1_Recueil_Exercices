@@ -14,6 +14,7 @@ string s2;
 s2.assign(s1, 2, 3);
 cout << '|' << s2 << '|' << endl;
 ~~~
+C
 
 2.
 ~~~cpp
@@ -22,6 +23,7 @@ string s2;
 s2.assign(s1, 3, 2);
 cout << '|' << s2 << '|' << endl;
 ~~~
+||
 
 3.	
 ~~~cpp
@@ -29,6 +31,7 @@ string s;
 s.assign("ABC", 2);
 cout << '|' << s << '|' << endl;
 ~~~
+AB
 
 4.	
 ~~~cpp
@@ -36,13 +39,14 @@ string s;
 s.assign(2, 65);
 cout << '|' << s << '|' << endl;
 ~~~
-
+AA
 5.	
 ~~~cpp
 string s;
 s.assign(4, '\101');
 cout << '|' << s << '|' << endl;
 ~~~
+???
 
 6.	
 ~~~cpp
@@ -50,30 +54,35 @@ string s;
 s.assign(4, '\x42');
 cout << '|' << s << '|' << endl;
 ~~~
+AAAA
 
 7.	
 ~~~cpp
 string s = string("A") + string("BC");
 cout << '|' << s << '|' << endl;
 ~~~
+ABC
 
 8.	
 ~~~cpp
 string s = string("A") + "BC";
 cout << '|' << s << '|' << endl;
 ~~~
+ABC
 
 9.	
 ~~~cpp
 string s = 'A' + string("BC");
 cout << '|' << s << '|' << endl;
 ~~~
+ABC
 
 10.	
 ~~~cpp
 string s = "A" + "BC";
 cout << '|' << s << '|' << endl;
 ~~~
+Erreur à la compilation
 
 11.	
 ~~~cpp
@@ -81,6 +90,7 @@ string s = "AB";
 s += 'C';
 cout << '|' << s << '|' << endl;
 ~~~
+ABC
 
 12.	
 ~~~cpp
@@ -89,6 +99,7 @@ string s2 = "123";
 s1.append(s2);
 cout << '|' << s1 << '|' << endl;
 ~~~
+123
 
 13.	
 ~~~cpp
@@ -97,6 +108,7 @@ string s2 = "123";
 s1.append(s2, 1, 3);
 cout << '|' << s1 << '|' << endl;
 ~~~
+23
 
 14.	
 ~~~cpp
@@ -104,6 +116,7 @@ string s;
 s.append("123", 2);
 cout << '|' << s << '|' << endl;
 ~~~
+12
 
 15.	
 ~~~cpp
@@ -111,6 +124,7 @@ string s;
 s.append(2, '2');
 cout << '|' << s << '|' << endl;
 ~~~
+22
 
 
 <details>

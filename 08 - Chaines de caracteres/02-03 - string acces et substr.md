@@ -9,6 +9,7 @@ _Il se peut qu'une séquence provoque une erreur à la compilation ou à l'exéc
 string s = "ABC";
 cout << '|' << s[1] << '|' << endl;
 ~~~
+B
 
 2.	
 ~~~cpp
@@ -16,6 +17,8 @@ string s1 = "ABC";
 string s2 = s1[1];
 cout << '|' << s2 << '|' << endl;
 ~~~
+b
+
 3.	
 ~~~cpp
 string s1 = "ABC";
@@ -23,74 +26,107 @@ string s2;
 s2 = s1[1];
 cout << '|' << s2 << '|' << endl;
 ~~~
+b
+
 4.	
 ~~~cpp
 string s = "ABC";
 cout << '|' << s[3] << '|' << endl;
 ~~~
+comportement indéfini
+
 5.	
 ~~~cpp
 string s = "ABC";
 cout << '|' << s[4] << '|' << endl;
 ~~~
+compoteemnt indéfini
+
 6.	
 ~~~cpp
 string s = "ABC";
 cout << '|' << s.at(3) << '|' << endl;
 ~~~
+exception
+
 7.	
 ~~~cpp
 string s;
 cout << s.length() << endl;
 ~~~
+0
+
 8.	
 ~~~cpp
 string s = "ABC";
 cout << s.length() << endl;
 ~~~
+3
+
 9.	
 ~~~cpp
 string s = "ABC";
 cout << s.size() << endl;
 ~~~
+3
+
 10.	
 ~~~cpp
 string s = "ABC";
 s.resize(5);
 cout << '|' << s << '|' << endl;
 ~~~
+ABC\0\0
+
 11.	
 ~~~cpp
 string s = "ABC";
 s.resize(2, 'x');
 cout << '|' << s << '|' << endl;
 ~~~
+AB
+
+
 12.	
 ~~~cpp
 string s = "ABC";
 s.resize(4, 'x');
 cout << '|' << s << '|' << endl;
 ~~~
+ABCx
+
 13.	
 ~~~cpp
 string s = "ABCDE";
 cout << '|' << s.substr(1, 2) << '|' << endl;
 ~~~
+BC
+
+
 14.	
 ~~~cpp
 string s = "ABCDE";
 cout << '|' << s.substr(0, 10) << '|' << endl;
 ~~~
+ABCDE
+
+
 15.	
 ~~~cpp
 string s = "ABCDE";
 cout << '|' << s.substr(3) << '|' << endl;
 ~~~
+DE
+
+
 16.	
 ~~~cpp
 string s = "ABCDE";
 cout << '|' << s.substr() << '|' << endl;
 ~~~
+ABCDE
+
+
 
 
 

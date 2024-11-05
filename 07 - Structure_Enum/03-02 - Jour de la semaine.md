@@ -22,6 +22,32 @@ switch(jour) {
 }
 cout << chaine << endl;
 ~~~
+~~~cpp
+enum class Jour {LUNDI, MARDI, MERCREDI, JEUDI,
+                 VENDREDI, SAMEDI, DIMANCHE};
+
+Jour jour = 0 ;      // LUNDI par exemple
+string chaine = "jour de la semaine : ";
+switch(jour) {
+   case Jour::LUNDI : chaine += "lundi";
+   case Jour::MARDI : chaine += "mardi";
+   case Jour::MERCREDI : chaine += "mercredi";
+   case Jour::JEUDI : chaine += "jeudi";
+   case Jour::VENDREDI : chaine += "vendredi";
+   case Jour::SAMEDI : chaine += "samedi";
+   case Jour::DIMANCHE : chaine += "dimanche";
+   default : chaine = "jour inconnu";
+}
+cout << chaine << endl;
+~~~
+
+
+
+
+
+
+
+
 
 <details>
 <summary>Solution</summary>
