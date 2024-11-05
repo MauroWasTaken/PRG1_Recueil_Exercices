@@ -36,6 +36,27 @@ et le nombre de jours d'une année.
 Note : on ignore pour cet exercices les subtilités du passage du calendrier julien au calendrier grégorien et encore 
 moins des calendriers pré-juliens. Pour simplifier le problème, ne considérez que les dates de l'ère commune, i.e. avec `.annee > 0`.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
 <summary>Solutions</summary>
 

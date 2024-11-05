@@ -19,15 +19,47 @@ Cercle* ptr = &cercle;
 Les instructions sont-elles correctes ?
 
 1. `cout << cercle.rayon;`
+- oui
 2. `cout << cercle->rayon;`
+- non
 3. `cout << *(&cercle).rayon;`
+- non
 4. `cercle.centre = origine;`
+- oui
 5. `ptr.rayon = 2;`
+- non
 6. `*ptr.rayon = 2;`
+- non
 7. `cercle.centre.x = 2;`
+- oui (c'est une copie en wr)
 8. `ptr.centre.x = 2;`
+- non
 9. `Coord coord1 = cercle.centre;`
+- oui
 10. `Coord coord2 = ptr->centre;`
+- oui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <details>
 <summary>Solutions</summary>

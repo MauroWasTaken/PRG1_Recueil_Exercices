@@ -15,16 +15,77 @@ struct Cercle {
 Que valent les déclarations proposées ?
 
 1. `Cercle cercle = {1, {2, 3, 4}};`
+   - rayon = 1
+      - x = 2
+      - y = 3
+      - x = 4
 2. `Cercle cercle = {1};`
+   - rayon = 1
+      - x = 0
+      - y = 0
+      - x = 0
 3. `Cercle cercle = {};`
+   - rayon = 0
+      - x = 0
+      - y = 0
+      - x = 0
 4. `Cercle cercle = {1, {2, 3}};`
+   - rayon = 1
+      - x = 2
+      - y = 3
+      - x = 0
 5. `Cercle cercle = {1, 2, 3, 4};`
-6. `Coord  coord  = {x=1, y=2, z=3};`
+   - rayon = 1
+      - x = 2
+      - y = 3
+      - x = 4
+6. `Coord  coord  = {x=1, y=2, z=3};`  
+    erreur de syntax
 7. `Coord  coord  = {.x=1, .y=2, .z=3};`
+   - x = 1
+   - y = 2
+   - x = 3
 8. `Coord  coord  = {.x=1,       .z=3};`
+   - x = 1
+   - y = 0
+   - x = 3
 9. `Coord  coord;`
+   - x = ?
+   - y = ?
+   - x = ?
 
 <details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <summary>Solutions</summary>
 
 | no |  R  |  X  |  Y  |  Z  | Commentaire                                         |

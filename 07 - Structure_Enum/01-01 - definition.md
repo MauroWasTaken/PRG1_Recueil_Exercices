@@ -7,6 +7,7 @@ Indiquer si les définitions proposées sont correctes ou non.
 struct Date {
    int jour, mois, annee;
 }
+//manque ; apres  }
 ~~~
 
 2.
@@ -17,6 +18,7 @@ struct Date {
    int mois;
    int annee;
 };
+//ok
 ~~~
 
 3.
@@ -25,6 +27,7 @@ struct Date {
 struct Date {
    int jour, mois, annee;
 };
+//ok
 ~~~
 
 4.
@@ -33,6 +36,7 @@ struct Date {
 struct Date {
    int jour; mois; annee;
 };
+/faux mois et annee ne sont pas bien declarés
 ~~~
 
 5.
@@ -41,12 +45,14 @@ struct Date {
 struct {
    int valeur;
 } date;
+// type annonime crée dans variable date
 ~~~
 
 6.
 
 ~~~cpp
 struct Vide {};
+//ok
 ~~~
 
 7.
@@ -56,6 +62,7 @@ struct Struct {
    int  valeur;
    int* ptr = nullptr;
 };
+//ok
 ~~~
 
 8.
@@ -64,6 +71,7 @@ struct Struct {
 struct Struct {
    string text;
 };
+//ok
 ~~~
 
 9.
@@ -77,6 +85,7 @@ struct Struct {
    char    car;
    Details details;
 };
+//ok
 ~~~
 
 10.
@@ -85,6 +94,7 @@ struct Struct {
 struct const Struct {
    int  valeur;
 };
+//false
 ~~~
 
 11.
@@ -93,6 +103,7 @@ struct const Struct {
 struct Struct {
    const char car = 'A';
 };
+//ok
 ~~~
 
 12.
@@ -101,6 +112,7 @@ struct Struct {
 struct Struct {
    const char c;
 };
+//ok
 ~~~
 
 
