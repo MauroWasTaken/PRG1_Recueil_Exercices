@@ -23,21 +23,28 @@ ostream& operator<<(ostream &os, const span<T>& s) {
     cout << "]";
     return os;
 }
-template <typename T>
-struct entre {
-    const T& min;
-    const T& max;
-    bool operator()(const T& x) {
-        return x >= min && x <= max;
+template <typename Iterateur>
+void afficher_vect_iter (const vector<Iterateur>& v) {
+    cout << "[";
+    for (size_t i=0; i<v.size(); ++i) {
+        if (i) cout << ", ";
+        cout << *v[i];
     }
-};
-
+    cout << "]";
+}
+template <typename T, typename Iterator>
+vector<Iterator> vect_iter_val (const vector<T>& v, const T& t) {
+    vector<Iterator> vi;
+    typename vector<T>::const_iterator it = v.cbegin();
+    for (; it != v.cend(); ++it) {
+        if ( *it == t )  vi.push_back(it);
+    }
+    return vi;
+}
 int main() {
-    vector v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    const vector v {1, 2, 3, 2, 4, 2, 2, 6, 2};
+    using const_iterator = vector<int>::const_iterator;
     cout << span(v) << endl;
-
-    cout << count_if(v.begin(), v.end(), entre<int>{3, 6}) << endl;
-    int min=3, max=6;
-    cout << count_if(v.begin(), v.end(), [&min, &max](const int& x) {return x >= min && x <= max;});
+    afficher_vect_iter(vect_iter_val<int, const_iterator>(v, 2));
     return 0;
 }

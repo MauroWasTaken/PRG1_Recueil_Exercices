@@ -10,6 +10,7 @@ array<int, 5> a{1, 2, 3, 4, 5};
 for(size_t i = 1; i <= 3; ++i)
    cout << a.at(i) << ' ';
 ~~~
+2 3 4
 <details>
 <summary>Solution</summary>
 
@@ -24,6 +25,8 @@ array<int, 5> a{1, 2, 3, 4, 5};
 for(size_t i = a.size()-1; i >= 0; --i)
    cout << a.at(i) << ' ';
 ~~~
+5 4 3 2 1 ohhhhhh size_t jamais < 0
+
 <details>
 <summary>Solution</summary>
 
@@ -54,6 +57,9 @@ array<int, 5> a{1, 2, 3, 4, 5};
 for(size_t i = 3; i < a.size(); --i)
    cout << a.at(i) << ' ';
 ~~~
+
+
+
 <details>
 <summary>Solution</summary>
 

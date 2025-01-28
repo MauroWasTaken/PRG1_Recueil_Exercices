@@ -44,7 +44,7 @@ double* pd = &d;     // ptr sur d
 // no 1
 fct(pd, d);
 ~~~
-
+2
 <details>
 <summary>Solution</summary>
 
@@ -67,7 +67,7 @@ fct(pd, d);
 // no 2
 fct(c, f);
 ~~~
-
+6
 <details>
 <summary>Solution</summary>
 
@@ -90,7 +90,7 @@ fct(c, f);
 // no 3
 fct(pf, s)
 ~~~
-
+2
 <details>
 <summary>Solution</summary>
 
@@ -113,7 +113,7 @@ fct(pf, s)
 // no 4
 fct(pi, f);
 ~~~
-
+6
 <details>
 <summary>Solution</summary>
 Cas simplifié: il existe une fonction ordinaire avec exactement les bons types pour tous les paramètres (n°6); c'est elle qui est appelée.
@@ -123,7 +123,7 @@ Cas simplifié: il existe une fonction ordinaire avec exactement les bons types 
 // no 5
 fct(pc, pc);
 ~~~
-
+2 - 3 
 <details>
 <summary>Solution</summary>
 
@@ -147,7 +147,7 @@ fct(pc, pc);
 // no 6
 fct(pi, i);
 ~~~
-
+2 - 4
 <details>
 <summary>Solution</summary>
 
@@ -172,6 +172,8 @@ fct(pi, i);
 fct(f, f);
 ~~~
 
+3
+
 <details>
 <summary>Solution</summary>
 
@@ -195,6 +197,8 @@ fct(f, f);
 fct(i, i);
 ~~~
 
+5
+
 <details>
 <summary>Solution</summary>
 Cas simplifié: il existe une fonction ordinaire avec exactement les bons types pour tous les paramètres (n°5); c'est elle qui est appelée.
@@ -206,6 +210,8 @@ Cas simplifié: il existe une fonction ordinaire avec exactement les bons types 
 // no 9
 fct(d, i);
 ~~~
+
+4
 
 <details>
 <summary>Solution</summary>
@@ -230,6 +236,8 @@ fct(d, i);
 fct(c, c);
 ~~~
 
+3
+
 <details>
 <summary>Solution</summary>
 
@@ -252,6 +260,8 @@ fct(c, c);
 // no 11
 fct(c, s);
 ~~~
+
+1
 
 <details>
 <summary>Solution</summary>
@@ -277,6 +287,8 @@ fct(c, s);
 fct(pd, i);
 ~~~
 
+2 - 4
+
 <details>
 <summary>Solution</summary>
 
@@ -301,6 +313,8 @@ fct(pd, i);
 fct(i, c);
 ~~~
 
+1
+
 <details>
 <summary>Solution</summary>
 
@@ -323,7 +337,7 @@ fct(i, c);
 // no 14
 fct(pc, pd);
 ~~~
-
+2
 <details>
 <summary>Solution</summary>
 
@@ -346,7 +360,7 @@ fct(pc, pd);
 // no 15
 fct(d, d);
 ~~~
-
+3
 <details>
 <summary>Solution</summary>
 
@@ -369,7 +383,7 @@ fct(d, d);
 // no 16
 fct(s+1, i);
 ~~~
-
+5
 <details>
 <summary>Solution</summary>
 
@@ -385,7 +399,7 @@ Cas simplifié: il existe une fonction ordinaire avec exactement les bons types 
 // no 17
 fct(s+d, d);
 ~~~
-
+3
 <details>
 <summary>Solution</summary>
 
@@ -411,6 +425,7 @@ Au final, nous avons `f(double, double)`
 // no 18
 fct<>(i, i);
 ~~~
+3 - 4
 
 <details>
 <summary>Solution</summary>
@@ -431,7 +446,7 @@ fct<>(i, i);
 // no 19
 fct<>(c, c);
 ~~~
-
+3
 <details>
 <summary>Solution</summary>
 
@@ -453,7 +468,7 @@ fct<>(c, c);
 // no 20
 fct<int>(d, d);
 ~~~
-
+1
 <details>
 <summary>Solution</summary>
 
@@ -477,7 +492,7 @@ fct<int>(d, d);
 // no 21
 fct<char>(d, c);
 ~~~
-
+3
 <details>
 <summary>Solution</summary>
 

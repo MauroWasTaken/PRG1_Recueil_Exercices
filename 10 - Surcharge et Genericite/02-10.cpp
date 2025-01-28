@@ -4,19 +4,34 @@
 
 using namespace std;
 
-template <typename T>
-T sum(const vector<T>& v) {
-    T sum = 0;
-    for (const auto& x : v) {
-        sum += x;
+template <typename T, size_t taille>
+using Ligne = array<T, taille>;
+
+template <typename T, size_t nb_ligne, size_t nb_colonne>
+using Matrice = array<Ligne<T, nb_colonne>, nb_ligne>;
+
+template <typename T1, size_t nb_ligne, size_t nb_colonne>
+T1 sum1(const Matrice<T1, nb_ligne, nb_colonne>& matrice) {
+    T1 sum = T1();
+    for (const array<T1, nb_colonne>& l : matrice) {
+        for (const T1& e : l) {
+            sum += e;
+        }
     }
     return sum;
 }
 
-template <typename T>
-T avg(const vector<T>& v) {
-    return sum(v) / v.size();
+template <typename T1, size_t nb_ligne, size_t nb_colonne>
+T1 sum2(const Matrice<T1, nb_ligne, nb_colonne>& matrice) {
+    T1 sum = T1();
+    for (size_t i = 0; i < nb_ligne; ++i) {
+        for (size_t j = 0; j < nb_colonne; ++j) {
+            sum += matrice[i][j];
+        }
+    }
+    return sum;
 }
+
 template <typename T, typename FN>
 void print_for_all(const vector<T>& v, FN fct ){
     cout << "[";
@@ -28,17 +43,19 @@ void print_for_all(const vector<T>& v, FN fct ){
 }
 
 int main(){
-    using Data    = double;
-    using Ligne   = vector<Data>;
-    using Matrice = vector<Ligne>;
+    using Matrice_int_2x3      = Matrice<int,    2, 3>;
+    using Matrice_double_3x2   = Matrice<double, 3, 2>;
 
-    const Matrice notes {{4.0, 5.0, 6.0},  // Jean
-                         {4.1, 5.1, 4.8},  // Marie
-                         {3.5, 4.1     },  // Joshua
-                         {4.5, 4.5, 4.6}}; // Ali
+    Matrice_int_2x3 m1      {{{ 0,  1,  2},
+                              {10, 11, 12}}};
 
-    cout << "somme   : " ;
-    print_for_all(notes, sum<double>);
-    cout << "moyenne : " ;
-    print_for_all(notes, avg<double>);
+    Matrice_double_3x2 m2   {{{0.0, 1.1},
+                              {1.0, 1.1},
+                              {2.0, 2.1}}};
+
+    cout << sum1(m1) << endl;
+    cout << sum1(m2) << endl;
+
+    cout << sum2(m1) << endl;
+    cout << sum2(m2) << endl;
 }

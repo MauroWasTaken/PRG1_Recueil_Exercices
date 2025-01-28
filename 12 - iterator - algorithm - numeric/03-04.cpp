@@ -32,19 +32,21 @@ void afficher_vect_iter (const vector<Iterateur>& v) {
     }
     cout << "]";
 }
-template <typename T, typename Iterator>
-vector<Iterator> vect_iter_val (const vector<T>& v, const T& t) {
-    vector<Iterator> vi;
-    typename vector<T>::const_iterator it = v.cbegin();
-    for (; it != v.cend(); ++it) {
-        if ( *it == t )  vi.push_back(it);
+template <typename T>
+bool meme_elements (const span<T>& s1, const span<T>& s2) {
+    typename span<T>::const_iterator it = s1.cbegin();
+    for (; it != s1.cend(); ++it) {
+        if(find(s2.begin(), s2.end(), *it) == s2.end()) return false;
     }
-    return vi;
+    return true;
 }
 int main() {
-    const vector v {1, 2, 3, 2, 4, 2, 2, 6, 2};
-    using const_iterator = vector<int>::const_iterator;
-    cout << span(v) << endl;
-    afficher_vect_iter(vect_iter_val<int, const_iterator>(v, 2));
-    return 0;
+
+    array  a {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    vector v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2};
+
+    cout << span<int>(a) << endl;
+    cout << span<int>(v) << endl;
+
+    cout << meme_elements<int>(span<int>(a), span<int>(v));
 }

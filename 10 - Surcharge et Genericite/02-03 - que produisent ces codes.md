@@ -14,6 +14,7 @@ int main() {
    cout << somme(a, a) << " / " << somme(b, b) ;
 }
 ~~~
+rien pas de template
 
 <details>
 <summary>Solution</summary>
@@ -36,7 +37,7 @@ int main() {
    cout << somme(a, b) << " / " << somme(a, b);
 }
 ~~~
-
+impossible les deux types sont differents
 <details>
 <summary>Solution</summary>
 
@@ -58,7 +59,7 @@ int main() {
    cout << somme<int>(a, b) << " / " << somme<float>(a, b);
 }
 ~~~
-
+3 / 3.5
 <details>
 <summary>Solution</summary>
 
@@ -83,7 +84,7 @@ int main() {
    cout << somme<char>(d, a) << " / " << somme<int>(d, a);
 }
 ~~~
-
+e / 101
 <details>
 <summary>Solution</summary>
 
@@ -110,7 +111,7 @@ int main() {
    cout << somme(a, b) << " / " << somme(b, a);
 }
 ~~~
-
+3 / 3.5
 <details>
 <summary>Solution</summary>
 
@@ -125,7 +126,6 @@ int main() {
 
 ------------------------------------------------
 </details>
-
 ~~~cpp
 // no 6
 template <typename T1, typename T2>
@@ -148,6 +148,7 @@ int main() {
    return 0;
 }
 ~~~
+2 / 3.5 / 3 / 5
 
 <details>
 <summary>Solution</summary>

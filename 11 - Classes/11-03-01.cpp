@@ -7,6 +7,8 @@ using namespace std;
 
 class Point{
   public:
+    Point() {x = 0; y = 0;};
+    Point(double x, double y) {this->x = x; this->y = y;};
     void afficher()const {cout << "(" << x << ", " << y << ")" << endl; }
     void deplacer(double dx,double dy) {x += dx, y += dy;}
     void setX(double x){this->x = x;}
@@ -17,18 +19,11 @@ class Point{
     double x,y;
 };
 
-
-using namespace std;
-
 int main() {
     Point centre;
-    centre.setX(0);
-    centre.setY(0);
     centre.afficher();
 
-    Point p;
-    p.setX(1.2);
-    p.setY(2.4);
+    Point p(1.2,2.4);
     p.afficher();
 
     p.deplacer(0.8, 0.6);

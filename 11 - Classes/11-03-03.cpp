@@ -1,3 +1,10 @@
-//
-// Created by maurx on 03/12/2024.
-//
+#include <string>
+
+class Pays {
+friend operator
+
+private:
+    string name;
+    size_t population;
+    size_t surface_size;
+};

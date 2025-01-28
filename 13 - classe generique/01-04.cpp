@@ -71,6 +71,14 @@ struct DansQuadrant {
         }
     }
 };
+template <typename T>
+void ListerPoints(vector<Point<T>> points){
+    for_each(points.begin(), points.end(), [](Point<T> p){
+        p.afficher();
+        cout << endl;
+    });
+}
+
 int main() {
     vector<Point<int>> dessin {{"p1",  1,  2},
                            {"p2",  4,  2},
@@ -78,7 +86,6 @@ int main() {
                            {"p4", -1,  5},
                            {"p5",  3, -1},
                            {"p6",  7,  0}};
-    DansQuadrant quadrant = { Quadrant::IV};
-    cout << count_if(dessin.begin(), dessin.end(),quadrant);
+    ListerPoints(dessin);
     return EXIT_SUCCESS;
 }

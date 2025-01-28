@@ -1,44 +1,40 @@
 #include <vector>
+#include <array>
 #include <iostream>
-#include <iomanip>
+#include <string>
+#include "Tri.h"
 
 using namespace std;
 
 template <typename T>
-T sum(const vector<T>& v) {
-    T sum = 0;
-    for (const auto& x : v) {
-        sum += x;
-    }
-    return sum;
+void exchange(T &a, T &b) {
+    T temp = a;
+    a = b;
+    b = temp;
 }
 
 template <typename T>
-T avg(const vector<T>& v) {
-    return sum(v) / v.size();
-}
-template <typename T, typename FN>
-void print_for_all(const vector<T>& v, FN fct ){
-    cout << "[";
-    for (size_t i = 0; i < v.size(); ++i) {
-        if (i) cout << ", ";
-        cout << fixed << setprecision(1) << fct(v[i]);
+void show(const span <T> s) {
+    for (const T& t : s) {
+        cout << t << " ";
     }
-    cout << "]" << endl;
+    cout << endl;
 }
 
 int main(){
-    using Data    = double;
-    using Ligne   = vector<Data>;
-    using Matrice = vector<Ligne>;
+    vector v      {6, 2, 8, 7, 1, 3};
+    array  a      {"chien"s, "chat"s, "souris"s, "poisson"s};
+    double t[ ] = {6.1, 2.2, 8.3, 7.4, 1.5, 3.6};
 
-    const Matrice notes {{4.0, 5.0, 6.0},  // Jean
-                         {4.1, 5.1, 4.8},  // Marie
-                         {3.5, 4.1     },  // Joshua
-                         {4.5, 4.5, 4.6}}; // Ali
+    show<int>(v);
+    show<string>(a);
+    show<double>(t);
 
-    cout << "somme   : " ;
-    print_for_all(notes, sum<double>);
-    cout << "moyenne : " ;
-    print_for_all(notes, avg<double>);
+    sort<int>(v);
+    sort<string>(a);
+    sort<double>(t);
+
+    show<int>(v);
+    show<string>(a);
+    show<double>(t);
 }

@@ -9,6 +9,7 @@ _Il se peut qu'une séquence provoque une erreur à la compilation ou à l'exéc
 array<int,3> a;
 for(int e : a) cout << e << ' ';
 ~~~
+comportement indéfini
 <details>
 <summary>Solution</summary>
 Le contenu de a est indéterminé 
@@ -19,6 +20,7 @@ Le contenu de a est indéterminé
 array<int,3> a{1,2};
 for(int e : a) cout << e << ' ';
 ~~~
+1 2 0  
 <details>
 <summary>Solution</summary>
 
@@ -32,6 +34,7 @@ for(int e : a) cout << e << ' ';
 array<int,3> a{1,2,3,4};
 for(int e : a) cout << e << ' ';
 ~~~
+comp error
 <details>
 <summary>Solution</summary>
 Erreur à la compilation
@@ -42,6 +45,8 @@ Erreur à la compilation
 array<int,3> a{};
 for(int e : a) cout << e << ' ';
 ~~~
+0 0 0
+
 <details>
 <summary>Solution</summary>
 
@@ -55,6 +60,8 @@ for(int e : a) cout << e << ' ';
 array<string,3> a;
 for(const string & e : a) cout << e.size() << ' ';
 ~~~
+0 0 0
+
 <details>
 <summary>Solution</summary>
 

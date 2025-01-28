@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Demos_PRG1-E",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Demos_PRG1-E::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Demos_PRG1-E-Debug-1a62f2d2ab7f99810172.json",
+					"name" : "Demos_PRG1-E",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mauro/c/HEIG/PRG1/PRG1_Recueil_Exercices/99 - Exercices r\u00e9capitulatifs/cmake-build-debug",
+		"source" : "/home/mauro/c/HEIG/PRG1/PRG1_Recueil_Exercices/99 - Exercices r\u00e9capitulatifs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

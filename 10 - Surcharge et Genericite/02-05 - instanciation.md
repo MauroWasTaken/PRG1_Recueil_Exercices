@@ -28,6 +28,15 @@ template
 int fct(const float& t, const double& u);
 ~~~
 
+oui
+
+int 
+
+const float&
+
+const double&
+
+
 <details>
 <summary>Solution</summary>
 
@@ -50,6 +59,12 @@ template
 int fct<>(const int& t, const double& u);
 ~~~
 
+int 
+
+int
+
+double
+
 <details>
 <summary>Solution</summary>
 
@@ -70,7 +85,7 @@ exemple d'appel : `fct<int>(i, d);`
 // no 3
 fct(f, d);
 ~~~
-
+non R n'est pas defini
 <details>
 <summary>Solution</summary>
 
@@ -83,7 +98,7 @@ Incorrect. R n'est pas déductible.
 // no 4
 fct<>(d, i);
 ~~~
-
+non R n'est pas defini
 <details>
 <summary>Solution</summary>
 
@@ -96,7 +111,11 @@ Incorrect. R n'est pas déductible.
 // no 5
 fct<int>(i, d);
 ~~~
+int 
 
+int
+
+double
 <details>
 <summary>Solution</summary>
 
@@ -113,7 +132,11 @@ Correct
 // no 6
 fct<int, double>(i, d);
 ~~~
+int
 
+double
+
+double
 <details>
 <summary>Solution</summary>
 

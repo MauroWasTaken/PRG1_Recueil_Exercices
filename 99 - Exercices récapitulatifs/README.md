@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Exercices récapitulatifs
 
 Ce répertoire contient quelques exercices récapitulatifs.<br>
@@ -79,3 +80,11 @@ l'examen final.
     - 01-02 operator new
     - 03-04 classe Tab
     
+=======
+# Exercices récapitulatifs
+
+Ce répertoire contient quelques exercices récapitulatifs. Les 
+exercices qui s'y trouvent visent à avoir une longueur et 
+une difficulté  similaire aux exercices d'écriture de code de 
+l'examen final. 
+>>>>>>> fbd7ec1 (big push x2)

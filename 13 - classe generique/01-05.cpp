@@ -87,5 +87,9 @@ int main() {
                            {"p5",  3, -1},
                            {"p6",  7,  0}};
     ListerPoints(dessin);
+    int x = 1,y = -1;
+    for_each(dessin.begin(), dessin.end(), [&x,&y](Point<int>& p){ p.deplacer(x,y); });
+    cout << endl;
+    ListerPoints(dessin);
     return EXIT_SUCCESS;
 }

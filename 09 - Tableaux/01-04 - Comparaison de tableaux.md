@@ -10,6 +10,7 @@ array<int, 3> a{1, 2, 3};
 array<int, 3> b{1, 3, 2};
 cout << boolalpha << (a < b); 
 ~~~
+true
 <details>
 <summary>Solution</summary>
 
@@ -25,6 +26,7 @@ array<int, 3> a{1, 2, 3};
 array<int, 4> b{1, 2, 3, 4};
 cout << boolalpha << (a < b); 
 ~~~
+error pas le meme type
 <details>
 <summary>Solution</summary>
 
@@ -40,6 +42,7 @@ array<int, 3> a{1, 2, 3};
 array<short, 3> b{2, 3, 1};
 cout << boolalpha << (a < b);
 ~~~
+
 <details>
 <summary>Solution</summary>
 
@@ -58,6 +61,9 @@ cout << boolalpha << (a < b) << endl
      << (a < c) << endl
      << (b < c);
 ~~~
+false
+true
+true
 <details>
 <summary>Solution</summary>
 
